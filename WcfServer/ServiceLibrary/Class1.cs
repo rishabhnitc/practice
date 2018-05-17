@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProtoBuf;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -16,25 +17,32 @@ namespace ServiceLibrary
     }
 
     [DataContract]
+    [ProtoContract]
     public class IssueResponse
     {
-        [DataMember]
+        [DataMember(Order = 0)]
+        [ProtoMember(1)]
         public List<Issue> Issue { get; set; }
     }
 
     [DataContract]
+    [ProtoContract]
     public class IssueRequest
     {
-        [DataMember]
+        [DataMember(Order = 0)]
+        [ProtoMember(1)]
         public string UserName { get; set; }
     }
 
     [DataContract]
+    [ProtoContract]
     public class Issue
     {
-        [DataMember]
+        [DataMember(Order = 0)]
+        [ProtoMember(1)]
         public int IssueId { get; set; }
-        [DataMember]
+        [DataMember(Order = 1)]
+        [ProtoMember(2)]
         public string Title { get; set; }
     }
 
