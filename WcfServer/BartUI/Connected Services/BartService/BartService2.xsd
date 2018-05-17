@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ServiceLibrary" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ServiceLibrary" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="IssueRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IssueRequest" nillable="true" type="tns:IssueRequest" />
+  <xs:complexType name="IssueResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Issue" nillable="true" type="tns:ArrayOfIssue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IssueResponse" nillable="true" type="tns:IssueResponse" />
+  <xs:complexType name="ArrayOfIssue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Issue" nillable="true" type="tns:Issue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIssue" nillable="true" type="tns:ArrayOfIssue" />
+  <xs:complexType name="Issue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IssueId" type="xs:int" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Issue" nillable="true" type="tns:Issue" />
+</xs:schema>

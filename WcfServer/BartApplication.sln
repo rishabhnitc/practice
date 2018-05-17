@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServer", "WcfServer\WcfServer.csproj", "{09915221-E000-4310-AA03-D513B8E26EAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceLibrary", "ServiceLibrary\ServiceLibrary.csproj", "{4E1B0250-44C4-4F03-BD2C-C540122A3868}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BartUI", "BartUI\BartUI.csproj", "{7DF7F07F-8823-46F5-BA9C-6AD389BD9569}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09915221-E000-4310-AA03-D513B8E26EAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09915221-E000-4310-AA03-D513B8E26EAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09915221-E000-4310-AA03-D513B8E26EAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09915221-E000-4310-AA03-D513B8E26EAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E1B0250-44C4-4F03-BD2C-C540122A3868}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E1B0250-44C4-4F03-BD2C-C540122A3868}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E1B0250-44C4-4F03-BD2C-C540122A3868}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E1B0250-44C4-4F03-BD2C-C540122A3868}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DF7F07F-8823-46F5-BA9C-6AD389BD9569}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DF7F07F-8823-46F5-BA9C-6AD389BD9569}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DF7F07F-8823-46F5-BA9C-6AD389BD9569}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DF7F07F-8823-46F5-BA9C-6AD389BD9569}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A8A5F712-9EFF-4771-A625-C4EE4E8F9FC5}
+	EndGlobalSection
+EndGlobal
