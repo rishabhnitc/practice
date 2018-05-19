@@ -164,6 +164,83 @@ namespace BartUI.BartService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="BigObject", Namespace="http://schemas.datacontract.org/2004/07/ServiceLibrary")]
+    [System.SerializableAttribute()]
+    public partial class BigObject : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short[] DataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short[] Data {
+            get {
+                return this.DataField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DataField, value) != true)) {
+                    this.DataField = value;
+                    this.RaisePropertyChanged("Data");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid ID {
+            get {
+                return this.IDField;
+            }
+            set {
+                if ((this.IDField.Equals(value) != true)) {
+                    this.IDField = value;
+                    this.RaisePropertyChanged("ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="BartService.IBartService")]
     public interface IBartService {
@@ -173,6 +250,12 @@ namespace BartUI.BartService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBartService/GetIssue", ReplyAction="http://tempuri.org/IBartService/GetIssueResponse")]
         System.Threading.Tasks.Task<BartUI.BartService.IssueResponse> GetIssueAsync(string id, BartUI.BartService.IssueRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBartService/GetBigObject", ReplyAction="http://tempuri.org/IBartService/GetBigObjectResponse")]
+        BartUI.BartService.BigObject GetBigObject(int size);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBartService/GetBigObject", ReplyAction="http://tempuri.org/IBartService/GetBigObjectResponse")]
+        System.Threading.Tasks.Task<BartUI.BartService.BigObject> GetBigObjectAsync(int size);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -208,6 +291,14 @@ namespace BartUI.BartService {
         
         public System.Threading.Tasks.Task<BartUI.BartService.IssueResponse> GetIssueAsync(string id, BartUI.BartService.IssueRequest request) {
             return base.Channel.GetIssueAsync(id, request);
+        }
+        
+        public BartUI.BartService.BigObject GetBigObject(int size) {
+            return base.Channel.GetBigObject(size);
+        }
+        
+        public System.Threading.Tasks.Task<BartUI.BartService.BigObject> GetBigObjectAsync(int size) {
+            return base.Channel.GetBigObjectAsync(size);
         }
     }
 }

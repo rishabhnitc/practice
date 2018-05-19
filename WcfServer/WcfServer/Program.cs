@@ -29,6 +29,7 @@ namespace WcfServer
                 host.Open();
                 Console.WriteLine(string.Join(",",host.BaseAddresses));
                 Console.ReadLine();
+               // int.MaxValue
             }
 
           

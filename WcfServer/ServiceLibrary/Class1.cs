@@ -14,6 +14,25 @@ namespace ServiceLibrary
     {
         [OperationContract]
         IssueResponse GetIssue(string id, IssueRequest request);
+        [OperationContract]
+        BigObject GetBigObject(int size);
+    }
+
+    [ProtoContract]
+    [DataContract]
+    public class BigObject
+    {
+        [ProtoMember(1)]
+        [DataMember(Order = 0)]
+        public List<short> Data { get; set; }
+
+        [ProtoMember(2)]
+        [DataMember(Order = 0)]
+        public string Name { get; set; }
+
+        [ProtoMember(3)]
+        [DataMember(Order = 0)]
+        public Guid ID { get; set; }
     }
 
     [DataContract]
@@ -47,6 +66,8 @@ namespace ServiceLibrary
     }
 
 
+
+
     public class BartService : IBartService
     {
         private static int count;
@@ -54,6 +75,30 @@ namespace ServiceLibrary
         {
             Console.WriteLine("Created Service Instance :" + count);
             count++;
+        }
+
+        public BigObject GetBigObject(int size)
+        {
+            var obj = new BigObject
+            {
+                Name = "My big object",
+                ID = Guid.NewGuid()
+            };
+
+            obj.Data = BuildBigData(size);
+            return obj;
+        }
+
+        private List<short> BuildBigData(int size)
+        {
+            Random rand = new Random();
+            List<short> data = new List<short>();
+            for (int i = 0; i < size; ++i)
+            {
+                data.Add((short)rand.Next(short.MaxValue));
+            }
+
+            return data;
         }
 
         public IssueResponse GetIssue(string id, IssueRequest request)
