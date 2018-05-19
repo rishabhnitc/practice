@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace ServiceLibrary
 {
+    [ProtoContract]
     [ServiceContract]
     public interface IBartService
     {

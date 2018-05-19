@@ -68,7 +68,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Connected Services\BartService\Reference.cs">
+    <Compile Include="Connected Services\SimpleProxy\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -96,26 +96,22 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Connected Services\BartService\BartService.wsdl" />
-    <None Include="Connected Services\BartService\BartService.xsd">
+    <None Include="Connected Services\SimpleProxy\BartService.wsdl" />
+    <None Include="Connected Services\SimpleProxy\BartService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\BartService\BartService1.xsd">
+    <None Include="Connected Services\SimpleProxy\BartService1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\BartService\BartService2.xsd">
+    <None Include="Connected Services\SimpleProxy\BartService2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\BartService\BartService3.xsd">
+    <None Include="Connected Services\SimpleProxy\BartService3.xsd">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\BartService\BartUI.BartService.BigObject.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\BartService\BartUI.BartService.IssueResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\ServiceLibrary.BigObject.datasource" />
+    <None Include="Properties\DataSources\ServiceLibrary.IssueResponse.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -128,22 +124,23 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\BartService\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\BartService\BartService.disco" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\BartService\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\BartService\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\BartService\Reference.svcmap">
+    <None Include="Connected Services\SimpleProxy\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\SimpleProxy\configuration.svcinfo" />
+    <None Include="Connected Services\SimpleProxy\configuration91.svcinfo" />
+    <None Include="Connected Services\SimpleProxy\BartService.disco" />
+    <Content Include="protobuf-net.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ServiceLibrary\ServiceLibrary.csproj">
+      <Project>{4e1b0250-44c4-4f03-bd2c-c540122a3868}</Project>
+      <Name>ServiceLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\SimpleProxy\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

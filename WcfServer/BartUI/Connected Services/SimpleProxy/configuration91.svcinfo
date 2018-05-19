@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="ex8hH5ktkTZxl40GWX2mkvGAUm8=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="A4UmhVaZoPbRDBTHXVC5ZJSk5js=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IBartService">
       <properties>
@@ -230,7 +230,7 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_IBartService" contract="BartService.IBartService" bindingType="basicHttpBinding" address="http://localhost:5555/BartService" bindingConfiguration="BasicHttpBinding_IBartService">
+    <endpoint name="BasicHttpBinding_IBartService" contract="SimpleProxy.IBartService" bindingType="basicHttpBinding" address="http://localhost:5555/BartService" bindingConfiguration="BasicHttpBinding_IBartService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://localhost:5555/BartService</serializedValue>
@@ -245,7 +245,7 @@
           <serializedValue>BasicHttpBinding_IBartService</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>BartService.IBartService</serializedValue>
+          <serializedValue>SimpleProxy.IBartService</serializedValue>
         </property>
         <property path="/headers" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.AddressHeaderCollectionElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.AddressHeaderCollectionElement</serializedValue>
@@ -315,7 +315,7 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="NetTcpBinding_IBartService" contract="BartService.IBartService" bindingType="netTcpBinding" address="net.tcp://localhost:5556/BartService" bindingConfiguration="NetTcpBinding_IBartService">
+    <endpoint name="NetTcpBinding_IBartService" contract="SimpleProxy.IBartService" bindingType="netTcpBinding" address="net.tcp://localhost:5556/BartService" bindingConfiguration="NetTcpBinding_IBartService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>net.tcp://localhost:5556/BartService</serializedValue>
@@ -330,7 +330,7 @@
           <serializedValue>NetTcpBinding_IBartService</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>BartService.IBartService</serializedValue>
+          <serializedValue>SimpleProxy.IBartService</serializedValue>
         </property>
         <property path="/headers" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.AddressHeaderCollectionElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.AddressHeaderCollectionElement</serializedValue>

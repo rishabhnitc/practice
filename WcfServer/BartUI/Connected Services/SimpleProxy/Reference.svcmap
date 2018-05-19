@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9785c005-c1c0-4099-ac8d-d92dbb58d4f1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:5555/BartService" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BartService.xsd" MetadataType="Schema" ID="150ef3f5-e237-4ed4-87af-38ae50f70696" SourceId="1" SourceUrl="http://localhost:5555/BartService?xsd=xsd0" />
+    <MetadataFile FileName="BartService.disco" MetadataType="Disco" ID="10041516-c42c-4c99-928b-065b33b3f422" SourceId="1" SourceUrl="http://localhost:5555/BartService?disco" />
+    <MetadataFile FileName="BartService1.xsd" MetadataType="Schema" ID="f4c8d80c-4635-469d-bd20-2ac4c77935ac" SourceId="1" SourceUrl="http://localhost:5555/BartService?xsd=xsd2" />
+    <MetadataFile FileName="BartService2.xsd" MetadataType="Schema" ID="17ca13d0-db50-499e-96f4-a7dd765dc868" SourceId="1" SourceUrl="http://localhost:5555/BartService?xsd=xsd3" />
+    <MetadataFile FileName="BartService.wsdl" MetadataType="Wsdl" ID="0c5c63d7-d23f-4ce6-84aa-e0186a133a17" SourceId="1" SourceUrl="http://localhost:5555/BartService?wsdl" />
+    <MetadataFile FileName="BartService3.xsd" MetadataType="Schema" ID="c57e48ad-6cb1-4cf0-8323-9ec8ac6d93ae" SourceId="1" SourceUrl="http://localhost:5555/BartService?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

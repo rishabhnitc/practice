@@ -1,4 +1,5 @@
-﻿using BartUI.BartService;
+﻿using BartUI.SimpleProxy;
+using ServiceLibrary;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -30,15 +31,16 @@ namespace BartUI
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            BartService.BartServiceClient client = new BartService.BartServiceClient("NetTcpBinding_IBartService");
-            var issues = client.GetIssue(Guid.NewGuid().ToString(), new BartService.IssueRequest() { UserName = Environment.UserName });
+            BartServiceClient client = new BartServiceClient("NetTcpBinding_IBartService");
+            var issues = client.GetIssue(Guid.NewGuid().ToString(), new IssueRequest() { UserName = Environment.UserName });
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             int objSize = 512 * 512 * 127;
             int rounds = 2;
-            BartService.BartServiceClient client = new BartService.BartServiceClient("NetTcpBinding_IBartService");
+            BartServiceClient client = new BartServiceClient("NetTcpBinding_IBartService");
+            //BartService.BartServiceClient client = new BartService.BartServiceClient("BasicHttpBinding_IBartService");
             Stopwatch timer = new Stopwatch();
             double totalTime = 0;
             for (int r = 0; r < rounds; ++r)
