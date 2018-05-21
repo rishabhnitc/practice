@@ -1,8 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ServiceModel;
 
 namespace ServiceLibrary
 {
+
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single, ConcurrencyMode = ConcurrencyMode.Multiple)]
+    public class NotificationService : INotificationService
+    {
+        public void Register()
+        {
+            
+        }
+    }
+
+
     public class BartService : IBartService
     {
         private static int count;

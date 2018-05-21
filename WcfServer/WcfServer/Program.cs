@@ -21,18 +21,19 @@ namespace WcfServer
 
             // using (var host = new UnityServiceHost(ServiceHostController.UnityContainer,typeof(BartService),baseAddress1, baseAddress2))
             using (var host = new UnityServiceHost(ServiceHostController.UnityContainer, typeof(BartService)))
-
+            using (var host1 = new UnityServiceHost(ServiceHostController.UnityContainer, typeof(NotificationService)))
             {
                 host.Closed += Host_Closed;
                 host.Opened += Host_Opened;
                 host.Faulted += Host_Faulted;
                 host.Open();
-                Console.WriteLine(string.Join(",",host.BaseAddresses));
+                host1.Open();
+                Console.WriteLine(string.Join(",", host.BaseAddresses));
                 Console.ReadLine();
-               // int.MaxValue
+                // int.MaxValue
             }
 
-          
+
         }
 
         private static void Host_Faulted(object sender, EventArgs e)
@@ -47,7 +48,7 @@ namespace WcfServer
 
         private static void Host_Closed(object sender, EventArgs e)
         {
-        
+
         }
     }
 }
