@@ -46,8 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="BigObject.cs" />
+    <Compile Include="IBartService.cs" />
+    <Compile Include="Issue.cs" />
     <Compile Include="IssueProvider.cs" />
+    <Compile Include="IssueRequest.cs" />
+    <Compile Include="IssueResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
